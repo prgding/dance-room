@@ -8,7 +8,6 @@ public class Room {
 
     public Room() {
     }
-
     public Room(String name, int area, int status) {
         this.name = name;
         this.area = area;

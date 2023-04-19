@@ -1,23 +1,15 @@
 <template>
-    <h1>Dance Classroom Management System</h1>
-    <div class="mycompo">
-        <Table/>
-        <Button/>
-    </div>
-
+    <h1>舞蹈房间管理系统</h1>
+    <router-view/>
 </template>
 
 <script lang="ts">
 
 
 import {Options, Vue} from 'vue-class-component';
-import Table from "@/components/Table.vue";
-import Button from "@/components/Button.vue";
 
 @Options({
     components: {
-        Button,
-        Table,
     },
 })
 export default class App extends Vue {
@@ -33,9 +25,5 @@ export default class App extends Vue {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
-}
-
-.mycompo {
-    padding: 10px 50px
 }
 </style>

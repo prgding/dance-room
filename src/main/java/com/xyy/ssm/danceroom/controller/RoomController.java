@@ -6,9 +6,7 @@ import com.xyy.ssm.danceroom.pojo.Room;
 import com.xyy.ssm.danceroom.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +18,8 @@ public class RoomController {
 
     @RequestMapping("/add")
     @ResponseBody
-    public int doAdd(Room room) {
+    public int doAdd(@RequestBody Room room) {
+        System.out.println(room);
         return roomService.addRoom(room);
     }
 
@@ -33,7 +32,8 @@ public class RoomController {
 
     @RequestMapping("/update")
     @ResponseBody
-    public int doUpdate(Room room) {
+    public int doUpdate(@RequestBody Room room) {
+        System.out.println(room);
         return roomService.updateRoom(room);
     }
 

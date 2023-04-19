@@ -8,14 +8,17 @@
 </template>
 
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const handleDetail = () => {
-    alert("new")
+    // 路由跳转到 /add
+    router.push('/add')
 }
 </script>
 
 <style>
 .mb-4 {
-    padding-top: 15px;
-    padding-left: 10px;
+    padding-top: 30px;
+    padding-left: 20px;
 }
 </style>

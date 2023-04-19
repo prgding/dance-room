@@ -4,7 +4,6 @@
     <title>index page</title>
 </head>
 <body>
-这是 index 页面
-<a href="${pageContext.request.contextPath}/findAll">点击展示舞房列表</a>
+<a href="${pageContext.request.contextPath}/findAll">测试接口</a>
 </body>
 </html>
