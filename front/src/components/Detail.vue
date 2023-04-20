@@ -32,7 +32,7 @@ import axios from "axios";
 const route = useRoute()
 const id = route.params.id
 
-axios.get(`http://localhost:8080/danceroom/findOne?id=${id}`).then(res => {
+axios.get(`http://localhost:8080/findOne?id=${id}`).then(res => {
     formLabelAlign.name = res.data.name
     formLabelAlign.area = res.data.area
     formLabelAlign.status = res.data.status

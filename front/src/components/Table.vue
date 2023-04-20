@@ -55,7 +55,7 @@ const handleDetail = (index: number, row: User) => {
 const handleDelete = (index: number, row: User) => {
     console.log(index, row)
 }
-axios.get('http://localhost:8080/danceroom/findAll').then((res) => {
+axios.get('http://localhost:8080/findAll').then((res) => {
     tableData.value = res.data;
 })
 

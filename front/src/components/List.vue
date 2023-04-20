@@ -48,7 +48,7 @@ import {useRouter} from 'vue-router'
 
 const router = useRouter()
 
-axios.get('http://localhost:8080/danceroom/findAll').then((res) => {
+axios.get('http://localhost:8080/findAll').then((res) => {
     tableData.value = res.data;
 })
 
@@ -76,8 +76,8 @@ const handleDetail = (index: number, row: User) => {
     router.push(`/detail/${row.id}`)
 }
 const handleDelete = (index: number, row: User) => {
-    axios.get(`http://localhost:8080/danceroom/del?id=${row.id}`).then(res => {
-        axios.get('http://localhost:8080/danceroom/findAll').then((res) => {
+    axios.get(`http://localhost:8080/del?id=${row.id}`).then(res => {
+        axios.get('http://localhost:8080/findAll').then((res) => {
             tableData.value = res.data;
         })
     }).catch(err => {

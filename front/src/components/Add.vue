@@ -69,7 +69,7 @@ const options = [
 const router = useRouter()
 const labelPosition = ref('right')
 const handleAdd = () => {
-    axios.post('http://localhost:8080/danceroom/add', {
+    axios.post('http://localhost:8080/add', {
         name: select.value + formLabelAlign.name,
         area: formLabelAlign.area,
         status: formLabelAlign.status
