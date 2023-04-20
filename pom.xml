@@ -2,11 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xyy.ssm</groupId>
-    <artifactId>danceroom</artifactId>
+    <artifactId>dance-room</artifactId>
     <packaging>war</packaging>
 
+
     <version>1.0-SNAPSHOT</version>
-    <name>danceroom Maven Webapp</name>
+    <name>dance-room Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
@@ -94,7 +95,7 @@
 
     </dependencies>
     <build>
-        <finalName>danceroom</finalName>
+        <finalName>dance-room</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -126,4 +127,9 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 </project>

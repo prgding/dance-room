@@ -6,7 +6,10 @@ import com.xyy.ssm.danceroom.pojo.Room;
 import com.xyy.ssm.danceroom.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -45,7 +48,7 @@ public class RoomController {
         return new ObjectMapper().writeValueAsString(oneRoom);
     }
 
-    @RequestMapping("/findAll")
+    @RequestMapping(value = "/findAll", produces = "application/json;charset=utf-8")
     @ResponseBody
     public String doFindAll() throws JsonProcessingException {
         List<Room> allRooms = roomService.findAllRooms();

@@ -1,17 +1,19 @@
 <template>
     <h1>舞蹈房间管理系统</h1>
-    <router-view/>
+    <router-view></router-view>
 </template>
 
 <script lang="ts">
 
 
 import {Options, Vue} from 'vue-class-component';
+import {inject} from "vue";
+
 
 @Options({
-    components: {
-    },
+    components: {},
 })
+
 export default class App extends Vue {
 }
 
