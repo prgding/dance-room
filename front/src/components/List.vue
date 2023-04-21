@@ -47,8 +47,9 @@ import Button from "@/components/Button.vue";
 import {useRouter} from 'vue-router'
 
 const router = useRouter()
-
-axios.get('http://localhost:8080/findAll').then((res) => {
+import conf from '@/config'
+const url = conf.url
+axios.get(`${url}/findAll`).then((res) => {
     tableData.value = res.data;
 })
 
@@ -75,9 +76,10 @@ const handleEdit = (index: number, row: User) => {
 const handleDetail = (index: number, row: User) => {
     router.push(`/detail/${row.id}`)
 }
+
 const handleDelete = (index: number, row: User) => {
-    axios.get(`http://localhost:8080/del?id=${row.id}`).then(res => {
-        axios.get('http://localhost:8080/findAll').then((res) => {
+    axios.get(`${url}/del?id=${row.id}`).then(res => {
+        axios.get(`${url}/findAll`).then((res) => {
             tableData.value = res.data;
         })
     }).catch(err => {

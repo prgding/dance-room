@@ -1,5 +1,5 @@
 <template>
-    <h1>舞蹈房间管理系统</h1>
+    <h1>aa</h1>
     <router-view></router-view>
 </template>
 

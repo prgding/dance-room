@@ -31,8 +31,10 @@ import {useRoute, useRouter} from 'vue-router'
 import axios from "axios";
 const route = useRoute()
 const id = route.params.id
+import conf from '@/config'
+const url = conf.url
 
-axios.get(`http://localhost:8080/findOne?id=${id}`).then(res => {
+axios.get(`${url}/findOne?id=${id}`).then(res => {
     formLabelAlign.name = res.data.name
     formLabelAlign.area = res.data.area
     formLabelAlign.status = res.data.status

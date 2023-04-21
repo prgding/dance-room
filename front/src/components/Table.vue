@@ -29,6 +29,8 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import axios from "axios";
+import conf from '@/config'
+const url = conf.url
 
 interface User {
     name: string
@@ -55,7 +57,7 @@ const handleDetail = (index: number, row: User) => {
 const handleDelete = (index: number, row: User) => {
     console.log(index, row)
 }
-axios.get('http://localhost:8080/findAll').then((res) => {
+axios.get(`${url}/findAll`).then((res) => {
     tableData.value = res.data;
 })
 
