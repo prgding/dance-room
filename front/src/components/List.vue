@@ -78,7 +78,7 @@ const handleDetail = (index: number, row: User) => {
 }
 
 const handleDelete = (index: number, row: User) => {
-    axios.get(`${url}/del?id=${row.id}`).then(res => {
+    axios.get(`${url}/del/${row.id}`).then(res => {
         axios.get(`${url}/findAll`).then((res) => {
             tableData.value = res.data;
         })

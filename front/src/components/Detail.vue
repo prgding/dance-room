@@ -34,7 +34,7 @@ const id = route.params.id
 import conf from '@/config'
 const url = conf.url
 
-axios.get(`${url}/findOne?id=${id}`).then(res => {
+axios.get(`${url}/findOne/${id}`).then(res => {
     formLabelAlign.name = res.data.name
     formLabelAlign.area = res.data.area
     formLabelAlign.status = res.data.status
